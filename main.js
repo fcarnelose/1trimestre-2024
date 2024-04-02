@@ -36,7 +36,11 @@ function calculaTempo(tempoObjetivo){
     minutos %=60;
     horas %= 24;
 
+    if(tempoFinal > 0){
     return dias + " dias "+ horas + " horas "+ minutos + " minutos "+ segundos + " segundos ";
+} else{
+    return "TEMPO ESGOTADO";
+}
 }
 
 function atualizaCronometro(){
@@ -45,5 +49,8 @@ for (let i = 0; i<contadores.length; i++){
     }
 }
 
+function comecaCronometro(){
 atualizaCronometro();
 setInterval(atualizaCronometro, 1000);
+}
+//comecaCronometro();
